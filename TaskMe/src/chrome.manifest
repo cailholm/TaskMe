@@ -1,0 +1,6 @@
+content     taskme		chrome/content/
+skin		taskme		classic/1.0			chrome/skin/
+locale		taskme		en-US				chrome/locale/en-US/
+locale		taskme		pl-PL				chrome/locale/pl-PL/
+
+overlay chrome://messenger/content/messenger.xul chrome://taskme/content/taskmeui.xul

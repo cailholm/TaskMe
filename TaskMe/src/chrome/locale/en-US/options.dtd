@@ -1,0 +1,21 @@
+<!ENTITY prefwindow.title "Task Me - Settings...">
+<!ENTITY prefwindow.eventspane "Events">
+<!ENTITY prefwindow.reportspane "Reports">
+<!ENTITY prefwindow.calendar "Choose calendar:">
+<!ENTITY prefwindow.calendar.accesskey "C">
+<!ENTITY prefwindow.eventinterval "Sample interval:">
+
+<!ENTITY prefwindow.eventsoff "events off">
+<!ENTITY prefwindow.15minutes "15 minutes">
+<!ENTITY prefwindow.30minutes "30 minutes">
+<!ENTITY prefwindow.1hour "1 hour">
+<!ENTITY prefwindow.2hours "2 hours">
+<!ENTITY prefwindow.3hours "3 hours">
+<!ENTITY prefwindow.4hours "4 hours">
+<!ENTITY prefwindow.5hours "5 hours">
+<!ENTITY prefwindow.6hours "6 hours">
+<!ENTITY prefwindow.7hours "7 hours">
+<!ENTITY prefwindow.8hours "8 hours">
+<!ENTITY prefwindow.12hours "12 hours">
+<!ENTITY prefwindow.1day "1 day">
+<!ENTITY prefwindow.2days "2 days">

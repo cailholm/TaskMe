@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE prefwindow SYSTEM "chrome://taskme/locale/eventdialog.dtd">
+
+
+<dialog
+  xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+  id="takmeEventDialog"
+  title="&eventwindow.title;"
+  ondialogaccept="return onOK();"
+  onload="onLoad();"
+  persist="screenX screenY width height"
+  windowtype="taskmeDialogWindowType">
+
+  <script type="application/javascript" src="chrome://taskme/content/eventdialog.js"/>
+
+  <vbox>
+    <label value="&eventwindow.label;"/>
+    <textbox id="message" cols="40" rows="10" maxlength="2048" multiline="true" newlines="pasteintact" spellcheck="true" />
+  </vbox>
+</dialog>

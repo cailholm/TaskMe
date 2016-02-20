@@ -1,0 +1,1 @@
+pref("extensions.taskme_ext.eventinterval", 0);

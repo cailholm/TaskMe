@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>taskme@piotr.gawel</em:id>
+	  <em:type>2</em:type>
+    <em:name>Task Me (activity logger)</em:name>
+    <em:description>
+This extension adds sampled task monitoring feature to your calendar.
+
+It is Your activity logger.
+
+It periodically displays window with textbox where You can put your description of currently performed tasks.
+Task Me extension will create event with your description in chosen calendar.
+
+By default activity logger is deactivated. To activate it, configure it first in extension's settings.
+
+First sentence will be treated as event's title. Submitting a description without a change
+will extend the event in Your calendar instead of creating new event.
+    </em:description>
+    <em:localized>
+      <Description>
+        <em:locale>pl-PL</em:locale>
+        <em:name>Task Me (menadżer zadań)</em:name>
+        <em:description>
+Rozszerzenie dodaje funkcjonalność próbkowego monitorowania zadań wpisywanych do kalendarza.
+
+Jest logerem czynności wykonywanych przez Ciebie.
+
+Co pewien okres wyświetlone zostanie okno, za pomocą którego użytkownik może wprowadzić opis aktualnie wykonywanych zadań.
+Rozszerzenie Task Me utworzy zdarzenie z wprowadzonym opisem w wybranym kalendarzu.
+
+Domyślnie loger czynności jest wyłączony. Aby go aktywować, należy najpierw skonfigurować go w opcjach rozszerzenia.
+
+Pierwsze zdanie zostanie użyte jako tytuł zdarzenia. Zatwierdzenie opisu bez zmian
+spowoduje rozszerzenie istniejącego zdarzenia w kalendarzu, a nie utworzenie nowego zdarzenia.
+        </em:description>
+      </Description>
+    </em:localized>
+    <em:version>1.0</em:version>
+    <em:creator>Piotr Gawel</em:creator>
+    <em:aboutURL>chrome://taskme/content/about.xul</em:aboutURL>
+    <em:optionsURL>chrome://taskme/content/options.xul</em:optionsURL>
+    <em:iconURL>chrome://taskme/skin/icon.png</em:iconURL>
+    <em:targetApplication>
+      <Description>
+        <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
+        <em:minVersion>38.5.1</em:minVersion>
+        <em:maxVersion>47.0</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+   
+  </Description>      
+</RDF>
+

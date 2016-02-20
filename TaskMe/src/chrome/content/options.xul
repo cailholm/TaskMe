@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<!DOCTYPE prefwindow SYSTEM "chrome://taskme/locale/options.dtd">
+
+<!--<prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" title="&prefwindow.title;" ondialogaccept="return onPrefsAccepted();">-->
+<prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" title="&prefwindow.title;">
+  <prefpane id="pane1" label="&prefwindow.eventspane;">
+    <preferences>
+      <preference id="calendarname" name="extensions.taskme_ext.calendarname" type="unichar"/>
+      <preference id="eventinterval" name="extensions.taskme_ext.eventinterval" type="int"/>
+    </preferences>
+
+    <grid>
+      <columns>
+        <column/>
+        <column/>
+      </columns>
+      <rows>
+        <row align="center">
+          <label control="calendarslist" value="&prefwindow.calendar;"/>
+          <menulist preference="calendarname" id="calendarslist">
+            <menupopup/>
+          </menulist>
+        </row>
+        <row align="center">
+          <label control="eventinterval" value="&prefwindow.eventinterval;"/>
+          <menulist preference="eventinterval" id="eventinterval">
+            <menupopup>
+              <menuitem label="&prefwindow.eventsoff;" value="0"/>
+              <menuitem label="&prefwindow.15minutes;" value="900"/>
+              <menuitem label="&prefwindow.30minutes;" value="1800"/>
+              <menuitem label="&prefwindow.1hour;" value="3600"/>
+              <menuitem label="&prefwindow.2hours;" value="7200"/>
+              <menuitem label="&prefwindow.3hours;" value="10800"/>
+              <menuitem label="&prefwindow.4hours;" value="14400"/>
+              <menuitem label="&prefwindow.5hours;" value="18000"/>
+              <menuitem label="&prefwindow.6hours;" value="21600"/>
+              <menuitem label="&prefwindow.7hours;" value="25200"/>
+              <menuitem label="&prefwindow.8hours;" value="28800"/>
+              <menuitem label="&prefwindow.12hours;" value="43200"/>
+              <menuitem label="&prefwindow.1day;" value="86400"/>
+              <menuitem label="&prefwindow.2days;" value="172800"/>
+            </menupopup>
+          </menulist>
+        </row>
+      </rows>
+    </grid>
+    
+    <script type="application/javascript" src="chrome://taskme/content/preferences.js"/>
+    <script type="application/javascript" src="chrome://taskme/content/calendar.js"/>
+    <script type="application/javascript" src="chrome://taskme/content/options.js"/>
+  </prefpane>
+  <!--<prefpane id="pane2" label="&prefwindow.reportspane;">
+    <hbox align="center">
+      <label control="calendarslist" value="&prefwindow.calendar;"/>
+      <menulist preference="calendarname" id="calendarslist">
+        <menupopup/>
+      </menulist>
+    </hbox>
+  </prefpane>-->
+</prefwindow>
