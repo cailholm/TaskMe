@@ -51,8 +51,8 @@ var TaskEvent = {
     },
     __setupTimer: function () {
         if (this.interval > 0) {
-            this.timer = window.setTimeout(this.Trigger, this.interval * 1000);
-            //this.timer = window.setTimeout(this.Trigger, this.interval * 10);
+            this.timer = window.setTimeout(function () { TaskEvent.Trigger(); }, this.interval * 1000);
+            //this.timer = window.setTimeout(function () { TaskEvent.Trigger(); }, this.interval * 10);
         } else {
             this.timer = null;
         }

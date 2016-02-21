@@ -3,7 +3,7 @@
 <!DOCTYPE prefwindow SYSTEM "chrome://taskme/locale/options.dtd">
 
 <!--<prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" title="&prefwindow.title;" ondialogaccept="return onPrefsAccepted();">-->
-<prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" title="&prefwindow.title;">
+<prefwindow xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" title="&prefwindow.title;" id="extTaskMeOptions">
   <prefpane id="pane1" label="&prefwindow.eventspane;">
     <preferences>
       <preference id="calendarname" name="extensions.taskme_ext.calendarname" type="unichar"/>

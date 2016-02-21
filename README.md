@@ -1,17 +1,15 @@
 About extension:
 ===============
 
-This extension adds sampled task monitoring feature to your calendar. 
+Activity logger (sampled task monitoring) which uses calendar to store user's activities.
 
-It is Your activity logger.
+It periodically displays window with textbox where user can put description of currently performed tasks.
+TaskMe extension will create event with the description in chosen calendar.
 
-It periodically displays window with textbox where You can put your description of currently performed tasks.
-Task Me extension will create event with your description in chosen calendar.
+Activity logger is deactivated by default after installation. To activate it, configure it first in extension's settings.
 
-By default activity logger is deactivated. To activate it, configure it first in extension's settings.
-
-First sentence will be treated as event's title. Submitting a description without a change 
-will extend the event in Your calendar instead of creating new event.
+First sentence of the description will be treated as event's title. Submitting a description without a change 
+will extend the event in the calendar instead of creating new one.
 
 Building extension
 ==================
@@ -31,8 +29,9 @@ Change log:
 ==========
 
  v1.0
+ 
     Initial version. Features:
-	* asking about user's activity periodically
+	* asking about user's activity periodically,
 	* configuring the extension with:
-	    - period interval
-		- calendar where events are inserted
+	    - period interval,
+		- calendar where events are inserted.
