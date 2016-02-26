@@ -39,7 +39,7 @@ spowoduje rozszerzenie istniejącego zdarzenia w kalendarzu, a nie utworzenie no
         </em:description>
       </Description>
     </em:localized>
-    <em:version>1.0</em:version>
+    <em:version>1.1</em:version>
     <em:creator>Piotr Gawel</em:creator>
     <em:aboutURL>chrome://taskme/content/about.xul</em:aboutURL>
     <em:optionsURL>chrome://taskme/content/options.xul</em:optionsURL>

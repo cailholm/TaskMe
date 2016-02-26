@@ -53,6 +53,7 @@
     <Content Include="src\chrome\content\options.js" />
     <Content Include="src\chrome\content\preferences.js" />
     <Content Include="src\chrome\content\taskme.js" />
+    <Content Include="src\chrome\content\wakenotifier.js" />
     <Content Include="src\chrome\locale\en-US\options.dtd">
       <SubType>Designer</SubType>
     </Content>

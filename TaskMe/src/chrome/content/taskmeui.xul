@@ -4,5 +4,6 @@
  <script type="application/javascript" src="chrome://taskme/content/preferences.js"/>
  <script type="application/javascript" src="chrome://taskme/content/calendar.js"/>
   <script type="application/javascript" src="chrome://taskme/content/event.js"/>
+  <script type="application/javascript" src="chrome://taskme/content/wakenotifier.js"/>
  <script type="application/javascript" src="chrome://taskme/content/taskme.js"/>
 </overlay>

@@ -1,8 +1,8 @@
 var TaskMeWatcher = {
     initialize: function () {
         TaskMePreferences.GetPreferencesHandler().addObserver("", this, false);
-
         TaskEvent.Setup(TaskMePreferences.GetEventInterval());
+        WakeNotifier.start(this);
     },
 
     observe: function (subject, topic, data) {
@@ -24,6 +24,10 @@ var TaskMeWatcher = {
     shutdown: function () {
         TaskMePreferences.GetPreferencesHandler().removeObserver("", this);
         TaskEvent.Clean();
+    },
+
+    onWake: function (when_suspended) {
+        TaskEvent.StartNewEventAfterWake(when_suspended);
     }
 }
 

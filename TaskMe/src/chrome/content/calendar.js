@@ -59,7 +59,7 @@ var Calendar = {
 	        // Create iCalString and then an event from that string
 	        var iCalString = "BEGIN:VCALENDAR\n" +
 	                         "BEGIN:VEVENT\n" +
-	                         "SUMMARY:Test2345\n" +
+	                         "SUMMARY:TaskMeActivity\n" +
 	                         "DTSTART;VALUE=DATE:" + dateFromStr + "\n" +
 	                         "DTEND;VALUE=DATE:" + dateToStr + "\n" +
                              "END:VEVENT\n" +
