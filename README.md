@@ -31,7 +31,11 @@ Change log:
  v1.0
  
     Initial version. Features:
-	* asking about user's activity periodically,
+	* asking about user's activity periodically
 	* configuring the extension with:
-	    - period interval,
-		- calendar where events are inserted.
+	    - period interval
+		- calendar where events are inserted
+
+ v1.1
+ 
+	* hibernate support
