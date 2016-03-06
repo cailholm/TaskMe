@@ -41,6 +41,7 @@ Change log:
 	* hibernate support
 
  v1.2
+ 
  	* user may add tasks manually using:
  	    - command in Tools menu
 		- button in calendar's view
