@@ -1,3 +1,7 @@
 <!ENTITY eventwindow.title "Task Me - What are you doing?">
 <!ENTITY eventwindow.label "Your activity:">
+<!ENTITY eventwindow.acceptKeyLabel "Save">
+<!ENTITY eventwindow.acceptAccessKey "S">
+<!ENTITY eventwindow.cancelKeyLabel "Cancel">
+<!ENTITY eventwindow.cancelAccessKey "C">
 

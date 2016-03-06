@@ -58,6 +58,9 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="src\chrome\skin\icon.png" />
+    <Content Include="src\chrome\skin\icon_gs_16x16.png" />
+    <Content Include="src\chrome\skin\icon_gs_24x24.png" />
+    <Content Include="src\chrome\skin\taskme.css" />
     <Content Include="src\defaults\preferences\prefs.js" />
     <Content Include="src\install.rdf">
       <SubType>Designer</SubType>
@@ -146,9 +149,15 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="src\chrome\locale\en-US\commands.dtd">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="src\chrome\locale\en-US\messages.properties" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="src\chrome\locale\pl-PL\commands.dtd">
+      <SubType>Designer</SubType>
+    </Content>
     <None Include="src\chrome\locale\pl-PL\messages.properties" />
   </ItemGroup>
   <PropertyGroup>

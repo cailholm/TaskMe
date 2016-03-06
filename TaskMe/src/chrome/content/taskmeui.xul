@@ -1,9 +1,30 @@
 <?xml version="1.0"?>
+<!DOCTYPE dialog SYSTEM "chrome://taskme/locale/commands.dtd">
+<?xml-stylesheet href="chrome://taskme/skin/taskme.css" type="text/css"?>
 
-<overlay id="sample" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
- <script type="application/javascript" src="chrome://taskme/content/preferences.js"/>
- <script type="application/javascript" src="chrome://taskme/content/calendar.js"/>
+<overlay id="taskme" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script type="application/javascript" src="chrome://taskme/content/preferences.js"/>
+  <script type="application/javascript" src="chrome://taskme/content/calendar.js"/>
   <script type="application/javascript" src="chrome://taskme/content/event.js"/>
   <script type="application/javascript" src="chrome://taskme/content/wakenotifier.js"/>
- <script type="application/javascript" src="chrome://taskme/content/taskme.js"/>
+  <script type="application/javascript" src="chrome://taskme/content/taskme.js"/>
+
+  <!--Tools menu-->
+  <menupopup id="taskPopup">
+    <menuitem id="taskmeToolsMenuItem" ccode="" label="&menu.addTask;" accesskey="T" oncommand="TaskEvent.OpenManually();"/>
+  </menupopup>
+
+  <!--Toolbar button-->
+  <toolbarpalette id="MailToolbarPalette">
+    <toolbarbutton id="taskmeTButton" class="taskmeTButton toolbarbutton-1"
+      label="&toolbar.addTaskButton;" tooltiptext="&toolbar.addTaskToolTip;"
+      type="button" oncommand="TaskEvent.OpenManually();"/>
+  </toolbarpalette>
+
+  <toolbarpalette id="calendar-toolbar2">
+    <toolbarbutton id="taskmeTButton" class="taskmeTButton toolbarbutton-1"
+      label="&toolbar.addTaskButton;" tooltiptext="&toolbar.addTaskToolTip;"
+      type="button" oncommand="TaskEvent.OpenManually();"/>
+  </toolbarpalette>
+
 </overlay>

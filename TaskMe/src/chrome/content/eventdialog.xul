@@ -6,7 +6,12 @@
 <dialog
   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
   id="takmeEventDialog"
+  buttons="accept,cancel"
   title="&eventwindow.title;"
+  buttonlabelaccept="&eventwindow.acceptKeyLabel;"
+  buttonaccesskeyaccept="&eventwindow.acceptAccessKey;"
+  buttonlabelcancel="&eventwindow.cancelKeyLabel;"
+  buttonaccesskeycancel="&eventwindow.cancelAccessKey;"
   ondialogaccept="return onOK();"
   onload="onLoad();"
   persist="screenX screenY width height"

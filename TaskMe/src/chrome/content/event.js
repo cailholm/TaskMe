@@ -12,7 +12,11 @@ var TaskEvent = {
         this.__stopTimer();
         this.__setupTimer();
     },
-    Trigger: function () {
+    OpenManually: function () {
+        this.__stopTimer();
+        this.AskAboutTask();
+    },
+    AskAboutTask: function () {
         var params = { inn: { message: TaskEvent.lastMessage }, out: null };
         window.openDialog("chrome://taskme/content/eventdialog.xul", "takmeEventDialog",
                           "chrome, dialog, modal, alwaysRaised=yes, resizable=yes", params).focus();
@@ -66,8 +70,8 @@ var TaskEvent = {
     __setupTimer: function () {
         if (this.interval > 0) {
             this.timer = Components.classes["@mozilla.org/timer;1"].createInstance(Components.interfaces.nsITimer);
-            this.timer.initWithCallback(this.Trigger, this.interval * 1000, this.timer.TYPE_ONE_SHOT);
-            //this.timer.initWithCallback(this.Trigger, this.interval * 100, this.timer.TYPE_ONE_SHOT);
+            this.timer.initWithCallback(this.AskAboutTask, this.interval * 1000, this.timer.TYPE_ONE_SHOT);
+            //this.timer.initWithCallback(this.AskAboutTask, this.interval * 100, this.timer.TYPE_ONE_SHOT);
         } else {
             this.timer = null;
         }

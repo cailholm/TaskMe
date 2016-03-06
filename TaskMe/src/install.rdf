@@ -7,6 +7,7 @@
     <em:id>taskme@piotr.gawel</em:id>
 	  <em:type>2</em:type>
     <em:name>Task Me (activity logger)</em:name>
+    <em:locale>en-US</em:locale>
     <em:description>
 This extension adds sampled task monitoring feature to your calendar.
 
@@ -19,6 +20,11 @@ By default activity logger is deactivated. To activate it, configure it first in
 
 First sentence will be treated as event's title. Submitting a description without a change
 will extend the event in Your calendar instead of creating new event.
+
+User may also add new activity log manually:
+- using toolbar button in calendar view or main view,
+- choosing command from Tools menu.
+By default toolbar button on main view is hidden. It may be added by the user if needed.
     </em:description>
     <em:localized>
       <Description>
@@ -36,10 +42,15 @@ Domyślnie loger czynności jest wyłączony. Aby go aktywować, należy najpier
 
 Pierwsze zdanie zostanie użyte jako tytuł zdarzenia. Zatwierdzenie opisu bez zmian
 spowoduje rozszerzenie istniejącego zdarzenia w kalendarzu, a nie utworzenie nowego zdarzenia.
+
+Użytkownik może także dodać nowy opis wykonywanych zadań ręcznie:
+- korzystając z przycisku na pasku zadań w widoku kalendarza lub głównym widoku,
+- wybierając komendę z menu Narzędzia.
+Domyślnie przycisk na głównym widoku jest ukryty. Może być dodany przez użytkownika, jeśli jest taka potrzeba.
         </em:description>
       </Description>
     </em:localized>
-    <em:version>1.1</em:version>
+    <em:version>1.2</em:version>
     <em:creator>Piotr Gawel</em:creator>
     <em:aboutURL>chrome://taskme/content/about.xul</em:aboutURL>
     <em:optionsURL>chrome://taskme/content/options.xul</em:optionsURL>

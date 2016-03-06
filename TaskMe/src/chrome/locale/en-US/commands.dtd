@@ -1,0 +1,3 @@
+﻿<!ENTITY menu.addTask "TaskMe - add activity log">
+<!ENTITY toolbar.addTaskToolTip "Manually add Your activity log to the calendar">
+<!ENTITY toolbar.addTaskButton "Activity log">

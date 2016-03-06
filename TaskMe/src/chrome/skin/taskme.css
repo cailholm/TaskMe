@@ -1,0 +1,4 @@
+﻿@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+#taskmeTButton, [place="palette"] > #taskmeTButton {list-style-image: url("chrome://taskme/skin/icon_gs_24x24.png");}
+toolbar[iconsize="small"] #taskmeTButton {list-style-image: url("chrome://taskme/skin/icon_gs_16x16.png");}

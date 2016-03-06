@@ -39,3 +39,10 @@ Change log:
  v1.1
  
 	* hibernate support
+
+ v1.2
+ 	* user may add tasks manually using:
+ 	    - command in Tools menu
+		- button in calendar's view
+		- optional button in main view
+	* language-dependent access keys in input window
