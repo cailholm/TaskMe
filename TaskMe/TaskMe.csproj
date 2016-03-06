@@ -126,7 +126,9 @@
     <Content Include="src\chrome\content\calendar.js" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="src\chrome\content\eventdialog.xul" />
+    <Content Include="src\chrome\content\eventdialog.xul">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Content Include="src\chrome\locale\en-US\eventdialog.dtd">

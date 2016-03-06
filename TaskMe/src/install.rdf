@@ -7,7 +7,6 @@
     <em:id>taskme@piotr.gawel</em:id>
 	  <em:type>2</em:type>
     <em:name>Task Me (activity logger)</em:name>
-    <em:locale>en-US</em:locale>
     <em:description>
 This extension adds sampled task monitoring feature to your calendar.
 
