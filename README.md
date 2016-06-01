@@ -47,3 +47,7 @@ Change log:
 		- button in calendar's view
 		- optional button in main view
 	* language-dependent access keys in input window
+
+ v1.3
+ 
+ 	* using calendar's timezone settings when adding the event

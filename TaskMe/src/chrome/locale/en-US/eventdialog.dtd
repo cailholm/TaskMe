@@ -1,4 +1,4 @@
-<!ENTITY eventwindow.title "Task Me - What are you doing?">
+<!ENTITY eventwindow.title "Task Me - What have you been doing?">
 <!ENTITY eventwindow.label "Your activity:">
 <!ENTITY eventwindow.acceptKeyLabel "Save">
 <!ENTITY eventwindow.acceptAccessKey "S">

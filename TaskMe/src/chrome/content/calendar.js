@@ -46,43 +46,35 @@ var Calendar = {
 	        return;
 	    }
 
-	    var dateFromStr = this.__dateToStr(from);
-	    var id = this.eventIdPrefix + dateFromStr;
+	    var id = this.__calculateId(from);
+
+	    if (to < from) {
+	        to = new Date(from.getTime() + 60000);
+	    }
 
 	    var tempEvent = this.__retrieveItem(id, calendar);
 	    if (tempEvent != null) {
             // Event exists. Extend it instead of adding.
 	        this.__modifyEvent(calendar, tempEvent, id, to);
 	    } else {
-	        var dateToStr = this.__dateToStr(to);
-
-	        // Create iCalString and then an event from that string
-	        var iCalString = "BEGIN:VCALENDAR\n" +
-	                         "BEGIN:VEVENT\n" +
-	                         "SUMMARY:TaskMeActivity\n" +
-	                         "DTSTART;VALUE=DATE:" + dateFromStr + "\n" +
-	                         "DTEND;VALUE=DATE:" + dateToStr + "\n" +
-                             "END:VEVENT\n" +
-	                         "END:VCALENDAR\n";
-
 	        // create event Object out of iCalString
 	        var event = Components.classes["@mozilla.org/calendar/event;1"].createInstance(Components.interfaces.calIEvent);
-	        event.icalString = iCalString;
 	        event.title = this.__extractTitle(msg);
 	        event.id = id;
 	        event.setProperty('description', msg);
+	        event.startDate = this.__date2CalDate(from);
+	        event.endDate = this.__date2CalDate(to);
 	        calendar.addItem(event, null);
 	    }
 	},
-	ExtendEvent: function (from, duration) {
+	ExtendEvent: function (from, to) {
 	    var calendar = this.GetCurrentCalendar();
 	    if (calendar === null) {
 	        this.__alert('alertNoCalendar');
 	        return;
 	    }
 
-	    var dateFromStr = this.__dateToStr(from);
-	    var id = this.eventIdPrefix + dateFromStr;
+	    var id = this.__calculateId(from);
 
 	    var tempEvent = this.__retrieveItem(id, calendar);
 	    if (tempEvent == null) {
@@ -90,7 +82,7 @@ var Calendar = {
 	        return;
 	    }
 
-	    this.__modifyEvent(calendar, tempEvent, id, duration);
+	    this.__modifyEvent(calendar, tempEvent, id, to);
 	},
 	SetSilentMode: function (silent_mode) {
 	    this.silentMode = silent_mode;
@@ -121,6 +113,10 @@ var Calendar = {
 
 	    return (year + month + day + "T" + hour + minutes + seconds);
 	},
+	__calculateId: function(from) {
+	    var dateFromStr = this.__dateToStr(from);
+	    return this.eventIdPrefix + dateFromStr;
+	},
 	__retrieveItem: function (id, calendar) {
 	    var listener = new CalendarOpListener();
 	    calendar.getItem(id, listener);
@@ -131,15 +127,13 @@ var Calendar = {
 
 	    newEvent.icalString = tempEvent.icalString;
 	    newEvent.calendar = calendar;
-
-	    var dtend = newEvent.getProperty('dtend');
-	    var localToUnixTimestamp = Math.floor(to.getTime() / 1000) - to.getTimezoneOffset()*60;
-	    var localEventUnixTimestamp = Math.floor(dtend.nativeTime / 1000000);
-	    var diffSeconds = localToUnixTimestamp - localEventUnixTimestamp;
-	    dtend.second += diffSeconds;
-	    newEvent.setProperty('dtend', dtend);
+	    newEvent.setProperty('dtend', this.__date2CalDate(to));
 
 	    calendar.modifyItem(newEvent, tempEvent, null);
+	},
+	__date2CalDate: function(dt) {
+	    var d = cal.jsDateToDateTime(dt);
+	    return d.getInTimezone(calendarDefaultTimezone());
 	},
 	__extractTitle: function (msg) {
 	    var lines = msg.split('\n');
