@@ -60,7 +60,7 @@ Domyślnie przycisk na głównym widoku jest ukryty. Może być dodany przez uż
       <Description>
         <em:id>{3550f703-e582-4d05-9a08-453d09bdfdc6}</em:id>
         <em:minVersion>38.5.1</em:minVersion>
-        <em:maxVersion>57.0</em:maxVersion>
+        <em:maxVersion>38.*</em:maxVersion>
       </Description>
     </em:targetApplication>
   </Description>      
