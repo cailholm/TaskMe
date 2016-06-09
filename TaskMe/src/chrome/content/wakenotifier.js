@@ -22,7 +22,7 @@
             }
 
             WakeNotifier.stop();
-            WakeNotifier.start();
+            WakeNotifier.start(WakeNotifier.observer);
         }
     },
 

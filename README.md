@@ -51,3 +51,8 @@ Change log:
  v1.3
  
  	* using calendar's timezone settings when adding the event
+
+ v1.3.1
+ 
+ 	* fix of hibernate detection - event was not handled properly
+	  when hibernated second time

@@ -23,6 +23,7 @@ var TaskMeWatcher = {
 
     shutdown: function () {
         TaskMePreferences.GetPreferencesHandler().removeObserver("", this);
+        WakeNotifier.stop();
         TaskEvent.Clean();
     },
 
